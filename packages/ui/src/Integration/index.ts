@@ -1,6 +1,8 @@
 export * from './IntegrationActionSelectorCard';
+export * from './IntegrationDetail';
 export * from './IntegrationDetailHistoryListView';
 export * from './IntegrationDetailHistoryListViewItem';
+export * from './IntegrationDetailTab';
 export * from './IntegrationEditorActionsListItem';
 export * from './IntegrationEditorChooseAction';
 export * from './IntegrationEditorChooseConnection';
@@ -19,6 +21,7 @@ export * from './IntegrationIcon';
 export * from './IntegrationProgress';
 export * from './IntegrationStatus';
 export * from './IntegrationStatusDetail';
+export * from './IntegrationStepsHorizontalView';
 export * from './IntegrationVerticalFlow';
 export * from './IntegrationsList';
 export * from './IntegrationsListItem';
