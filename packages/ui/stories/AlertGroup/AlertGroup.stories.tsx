@@ -7,7 +7,7 @@ const stories = storiesOf('Notifications', module);
 
 stories.add('AlertGroup Basic', () => {
   return (
-    <AlertGroup assistiveTechnologyDelay={2000}>
+    <AlertGroup>
       {[
         <Alert key={0} type="success">
           <span>
@@ -23,22 +23,22 @@ let alertList: any[] = [
   {
     type: 'success',
     title: 'Success Alert',
-    key: 'alert1',
+    key: 0,
   },
   {
     type: 'warning',
     title: 'Warning Alert',
-    key: 'alert2',
+    key: 1,
   },
   {
     type: 'error',
     title: 'Error Alert',
-    key: 'alert3',
+    key: 2,
   },
   {
     type: 'info',
     title: 'Info Alert',
-    key: 'alert4',
+    key: 3,
   },
 ];
 
@@ -52,8 +52,34 @@ const buildAlert = (props: any, idx: number): JSX.Element => {
 
 stories.add('AlertGroup passed an array', () => {
   return (
-    <AlertGroup assistiveTechnologyDelay={5000}>
+    <AlertGroup assistiveTechnologyDelay={1000}>
       {alertList.map((props, idx) => buildAlert(props, idx))}
     </AlertGroup>
+  );
+});
+
+let counter = alertList.length;
+const addAlert = () => {
+  // console.log({counter});
+  const updatedAlertList = alertList.concat([
+    { type: 'success', title: 'Added alert', key: counter },
+  ]);
+  counter += 1;
+  // console.log('alertList: ', alertList);
+  // console.log('updatedAlertList', updatedAlertList);
+  // console.log(updatedAlertList);
+  alertList = updatedAlertList;
+};
+
+stories.add('AlertGroup additions', () => {
+  return (
+    <React.Fragment>
+      <button type="button" onClick={addAlert}>
+        Add alert
+      </button>
+      <AlertGroup assistiveTechnologyDelay={1000}>
+        {alertList.map((props, idx) => buildAlert(props, idx))}
+      </AlertGroup>
+    </React.Fragment>
   );
 });
