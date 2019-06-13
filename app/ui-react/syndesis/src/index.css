@@ -3,3 +3,6 @@ body {
   padding: 0;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
+
+@import url('~@syndesis/auto-form/dist/auto-form.css');
+@import url('~@syndesis/ui/dist/ui.css');

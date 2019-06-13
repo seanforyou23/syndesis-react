@@ -4,9 +4,7 @@
 @import url('~patternfly-react/dist/css/patternfly-react.css');
 
 /* pf4 base styles */
-/* @import url('~@patternfly/react-core/dist/styles/base.css'); */
 @import url('~@patternfly/patternfly/patternfly-variables.css');
-@import url('~@patternfly/patternfly/patternfly-shield-noninheritable.css');
 @import url('~@patternfly/patternfly/patternfly-common.css');
 @import url('~@patternfly/patternfly/patternfly-globals.css');
 @import url('~@patternfly/patternfly/utilities/Spacing/spacing.css');
